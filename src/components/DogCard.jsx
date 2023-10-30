@@ -14,7 +14,13 @@ export default function DogCard(props) {
           <p>{currentDog.bio}</p>
         </div>
       </div>
-      {currentDog.hasBeenSwiped && <div className="liked-badge">NOPE</div>}
+      {/* {currentDog.hasBeenSwiped && <div className="liked-badge">NOPE</div>} */}
+      {/* {currentDog.hasBeenSwiped && <Badge variant="dismiss">Cilike</Badge>} */}
+      {currentDog.hasBeenSwiped ? (
+        <Badge variant="dismiss">Nope</Badge>
+      ) : currentDog.hasBeenLiked ? (
+        <Badge variant="like">Like</Badge>
+      ) : null}
     </>
   );
 }

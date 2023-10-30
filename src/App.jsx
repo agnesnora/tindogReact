@@ -17,35 +17,19 @@ function App() {
 
   function handleLike(e) {
     let currentIndex = dogsDataClone.indexOf(currentDog);
-    const updatedDogs = [...dogsData];
-    updatedDogs[currentIndex] = {
-      ...updatedDogs[currentIndex],
+
+    const updatedCurrentDog = {
+      ...currentDog,
       hasBeenLiked: true,
     };
-    setDogsData(updatedDogs);
-
-    // return answer.answerId === answerId
-    // ? {
-    //     ...answer,
-    //     isSelected: !answer.isSelected,
-    //   }
-    // : { ...answer };
+    setCurrentDog(updatedCurrentDog);
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
-    }, 100);
+    }, 1000);
   }
 
   function handleDismiss() {
     let currentIndex = dogsData.indexOf(currentDog);
-    // const updatedDogs = [...dogsData];
-    // updatedDogs[currentIndex] = {
-    //   ...updatedDogs[currentIndex],
-    //   hasBeenSwiped: true,
-    // };
-    // setDogsData(updatedDogs);
-    // setTimeout(() => {
-    //   setCurrentDog(dogsData[currentIndex + 1]);
-    // }, 100);
 
     const updatedCurrentDog = {
       ...currentDog,
