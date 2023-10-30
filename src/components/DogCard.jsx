@@ -2,6 +2,7 @@ import Badge from "./Badge";
 
 export default function DogCard(props) {
   const { currentDog } = props;
+  console.log(currentDog);
   return (
     <>
       <div
@@ -12,12 +13,8 @@ export default function DogCard(props) {
           <h1>{currentDog.name}</h1>
           <p>{currentDog.bio}</p>
         </div>
-        {/* {currentDog.hasBeenLiked ? (
-          <Badge />
-        ) : currentDog.hasBeenSwiped ? (
-          <Badge />
-        ) : null} */}
       </div>
+      {currentDog.hasBeenSwiped && <div className="liked-badge">NOPE</div>}
     </>
   );
 }

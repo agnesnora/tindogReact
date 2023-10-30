@@ -32,20 +32,29 @@ function App() {
     // : { ...answer };
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
-    }, 1500);
+    }, 100);
   }
 
   function handleDismiss() {
     let currentIndex = dogsData.indexOf(currentDog);
-    const updatedDogs = [...dogsData];
-    updatedDogs[currentIndex] = {
-      ...updatedDogs[currentIndex],
+    // const updatedDogs = [...dogsData];
+    // updatedDogs[currentIndex] = {
+    //   ...updatedDogs[currentIndex],
+    //   hasBeenSwiped: true,
+    // };
+    // setDogsData(updatedDogs);
+    // setTimeout(() => {
+    //   setCurrentDog(dogsData[currentIndex + 1]);
+    // }, 100);
+
+    const updatedCurrentDog = {
+      ...currentDog,
       hasBeenSwiped: true,
     };
-    setDogsData(updatedDogs);
+    setCurrentDog(updatedCurrentDog);
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
-    }, 3000);
+    }, 1000);
   }
 
   function startOver() {
@@ -56,7 +65,11 @@ function App() {
     <>
       <Header />
       {currentDog ? (
-        <DogCard currentDog={currentDog} liked={currentDog.hasBeenLiked} />
+        <DogCard
+          currentDog={currentDog}
+          liked={currentDog.hasBeenLiked}
+          swiped={currentDog.hasBeenSwiped}
+        />
       ) : (
         <h1 style={{ color: "black" }}>No more dogs in your area</h1>
       )}
@@ -71,4 +84,35 @@ function App() {
   );
 }
 
+{
+  /* <>
+<Header />
+{currentDog ? (
+  <DogCard currentDog={currentDog} liked={currentDog.hasBeenLiked} />
+) : (
+  <h1 style={{ color: "black" }}>No more dogs in your area</h1>
+)}
+
+<Footer
+  currentDog={currentDog}
+  handleLike={handleLike}
+  handleDismiss={handleDismiss}
+  refresh={startOver}
+/>
+</> */
+}
+
 export default App;
+
+// return (
+//   <div>
+//     {photos.map((photo, index) => (
+//       <div key={index}>
+//         {photo.hasBeenLiked && <div className="liked-badge">Liked</div>}
+//         <img src={photo.image} alt={`Photo ${index}`} />
+//         <button onClick={handleLike}>Like</button>
+//         <p>Liked: {photo.hasBeenLiked ? 'Yes' : 'No'}</p>
+//       </div>
+//     ))}
+//   </div>
+// );

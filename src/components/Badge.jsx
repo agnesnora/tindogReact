@@ -1,7 +1,7 @@
 export default function Badge() {
   return (
     <>
-      <h1 className="badge">NOPE</h1>
+      <h1 className="liked">NOPE</h1>
     </>
   );
 }

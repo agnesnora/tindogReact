@@ -50,8 +50,28 @@ header > .icon {
     rgba(240, 105, 87, 1) 100%
   );
 }
-.badge {
-  color: purple;
+.liked-badge {
+  background: rgb(232, 45, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 45, 112, 1) 62%,
+    rgba(240, 105, 87, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 150px;
+  left: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 10px solid rgb(232, 45, 112);
+  border-radius: 30px 30px 30px 30px;
+  padding: 5px 10px;
+  font-size: 5.25rem;
+  font-weight: 600;
 }
 /* .container:before {
   position: absolute;
