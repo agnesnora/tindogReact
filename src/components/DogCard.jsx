@@ -2,7 +2,7 @@ import Badge from "./Badge";
 
 export default function DogCard(props) {
   const { currentDog } = props;
-  console.log(currentDog);
+
   return (
     <>
       <div
@@ -14,8 +14,7 @@ export default function DogCard(props) {
           <p>{currentDog.bio}</p>
         </div>
       </div>
-      {/* {currentDog.hasBeenSwiped && <div className="liked-badge">NOPE</div>} */}
-      {/* {currentDog.hasBeenSwiped && <Badge variant="dismiss">Cilike</Badge>} */}
+
       {currentDog.hasBeenSwiped ? (
         <Badge variant="dismiss">Nope</Badge>
       ) : currentDog.hasBeenLiked ? (
