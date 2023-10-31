@@ -27,7 +27,14 @@ export default function Footer({
                 className="icon dismiss"
               />
             </button>
-            <button data-like={currentDog.name}>
+            <button
+              data-like={currentDog.name}
+              disabled={
+                currentDog.hasBeenLiked || currentDog.hasBeenSwiped
+                  ? true
+                  : false
+              }
+            >
               <FaHeart
                 data-like={currentDog.name}
                 onClick={handleLike}
