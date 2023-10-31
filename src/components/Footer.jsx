@@ -13,7 +13,15 @@ export default function Footer({
         {" "}
         {currentDog ? (
           <>
-            <button data-dismiss={currentDog.name} onClick={handleDismiss}>
+            <button
+              disabled={
+                currentDog.hasBeenLiked || currentDog.hasBeenSwiped
+                  ? true
+                  : false
+              }
+              data-dismiss={currentDog.name}
+              onClick={handleDismiss}
+            >
               <MdClose
                 data-dismiss={currentDog.name}
                 className="icon dismiss"
