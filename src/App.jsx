@@ -16,7 +16,16 @@ function App() {
   useEffect(() => {
     setDogsData(dogs);
   }, []);
+  function saveMyDogs() {
+    const dogsLikedString = JSON.stringify(dogsLiked);
+    localStorage.setItem("dogsLiked", dogsLikedString);
+  }
 
+  function showMyDogs() {
+    const retrievedDogsLikedString = localStorage.getItem("dogsLiked");
+    const retrievedDogsLiked = JSON.parse(retrievedDogsLikedString);
+    console.log(retrievedDogsLiked);
+  }
   function handleLike(e) {
     let currentIndex = dogsDataClone.indexOf(currentDog);
     const updatedCurrentDog = {
@@ -28,9 +37,8 @@ function App() {
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
       setDogsLiked([...dogsLiked, updatedCurrentDog]);
+      saveMyDogs();
     }, 1000);
-
-    console.log(dogsLiked);
   }
 
   function handleDismiss() {
@@ -53,7 +61,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <Header />
+      <Header showMyDogs={showMyDogs} />
       {currentDog ? (
         <DogCard
           currentDog={currentDog}

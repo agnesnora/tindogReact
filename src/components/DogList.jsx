@@ -1,9 +1,4 @@
 export default function DogList({ dogsLiked }) {
-  console.log(dogsLiked);
-  // const { dogsLiked } = props;
-  // const dogsListEl = return dogsLiked.map((dog) => {
-  //   <div>{dog.avatar}</div>;
-  // });
   return (
     <>
       <>
