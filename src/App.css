@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 600px;
 
   text-align: center;
 }
@@ -146,4 +146,34 @@ button {
 
 .dismiss {
   color: rgb(232, 45, 112);
+}
+
+.dogList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+.dog-liked > img {
+  max-height: 20vh;
+  border-radius: 18px;
+}
+.main-conainer {
+  margin: 0 auto;
+}
+.btn-refresh {
+  font-weight: 500;
+  font-size: 1rem;
+
+  border-radius: 8px;
+  background: rgb(232, 45, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 45, 112, 1) 62%,
+    rgba(240, 105, 87, 1) 100%
+  );
+  color: #fff;
+  padding: 1em;
 }

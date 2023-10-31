@@ -28,7 +28,10 @@ export default function Footer({
             </button>
           </>
         ) : (
-          <button onClick={refresh}> Not sure? Start again!</button>
+          <button className="btn-refresh" onClick={refresh}>
+            {" "}
+            Not sure? Start again!
+          </button>
         )}
       </footer>
     </>

@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="main-container">
       <Header />
       {currentDog ? (
         <DogCard
@@ -62,8 +62,10 @@ function App() {
       ) : (
         <>
           {" "}
-          <h1 style={{ color: "black" }}>No more dogs in your area</h1>
-          <DogList />
+          <p style={{ color: "black" }}>No more dogs in your area</p>
+          <div className="dogList-container">
+            <DogList dogsLiked={dogsLiked} />
+          </div>
         </>
       )}
 
@@ -73,7 +75,7 @@ function App() {
         handleDismiss={handleDismiss}
         refresh={startOver}
       />
-    </>
+    </div>
   );
 }
 
