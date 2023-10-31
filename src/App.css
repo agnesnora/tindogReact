@@ -26,45 +26,57 @@ body {
   text-align: left;
   padding: 0.2em 1em;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff; /* Text color for the content */
-  /* padding-top: 100%; */
+  color: #fff; 
   margin-left: 1em;
   margin-bottom: 1em;
   border-radius: 18px;
 }
 .content > h1 {
   margin: 0;
+  font-size:1.5em;
+}
+.content>p{
+  margin-top:0.2em;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 header > .icon {
-  padding: 0.2em;
+  
   margin-bottom: 0.5rem;
+}
+
+header>img{
+  width:4rem;
+  margin-bottom:0.5em;
 }
 
 .person,
 .chat {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #d9dee6;
 }
-.paw {
-  color: #fff;
-  width: 15%;
-  height: 2em;
-  padding: 1em 2em;
-  border-radius: 30px;
-  background: rgb(232, 45, 112);
-  background: linear-gradient(
-    90deg,
-    rgba(232, 45, 112, 1) 30%,
-    rgba(240, 105, 87, 1) 100%
-  );
+
+.like-badge,
+.dismiss-badge {
+  
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 80px;
+  left: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 0.2rem 1.5rem;
 }
+
 .like-badge {
   background: rgb(41, 215, 138);
   background: linear-gradient(
@@ -76,19 +88,8 @@ header > .icon {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: absolute;
-  transform: rotate(-30deg);
-  top: 130px;
-  left: 30px;
-  text-transform: uppercase;
-  text-align: center;
+
   border: 10px solid rgb(41, 215, 138);
-  border-radius: 30px 30px 30px 30px;
-  padding: 5px 10px;
-  font-size: 4rem;
-  /* font-size: 5.25rem; */
-  font-weight: 600;
-  padding: 0.5rem 3rem;
 }
 
 .dismiss-badge {
@@ -102,17 +103,9 @@ header > .icon {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: absolute;
-  transform: rotate(-30deg);
-  top: 150px;
-  left: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  border: 10px solid rgb(232, 45, 112);
-  border-radius: 30px 30px 30px 30px;
-  padding: 5px 10px;
-  font-size: 5.25rem;
-  font-weight: 600;
+
+  border: 10px solid rgb(232, 45, 112); */
+ 
 }
 
 footer {
@@ -122,7 +115,7 @@ footer {
 }
 
 button {
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   border-radius: 50%;
   padding: 0.2em;
