@@ -6,7 +6,7 @@ export default function DogCard(props) {
   return (
     <>
       <div
-        className="container"
+        className="dogCard-container"
         style={{ backgroundImage: `url(${currentDog.avatar})` }}
       >
         <div className="content">

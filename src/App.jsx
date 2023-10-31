@@ -48,6 +48,7 @@ function App() {
 
   function startOver() {
     setCurrentDog(dogs[0]);
+    setDogsLiked([]);
   }
 
   return (
@@ -62,7 +63,8 @@ function App() {
       ) : (
         <>
           {" "}
-          <p style={{ color: "black" }}>No more dogs in your area</p>
+          <p>No more dogs in your area</p>
+          <p>Your dogs</p>
           <div className="dogList-container">
             <DogList dogsLiked={dogsLiked} />
           </div>
