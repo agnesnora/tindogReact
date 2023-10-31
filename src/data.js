@@ -7,14 +7,7 @@ const dogs = [
     hasBeenSwiped: false,
     hasBeenLiked: false,
   },
-  {
-    name: "Bella",
-    avatar: "/images/dog-bella.jpg",
-    age: 36,
-    bio: "Yup, that's my owner. U can meet him if you want",
-    hasBeenSwiped: false,
-    hasBeenLiked: false,
-  },
+
   {
     name: "Teddy",
     avatar: "/images/dog-teddy.jpg",
@@ -74,12 +67,12 @@ const dogs = [
   },
   {
     name: "Pumi",
-    avatar: "/images/dog-bernard.jpg",
+    avatar: "/images/colliepumi.jpg",
     age: 29,
     bio: "Seeking a cuddle buddy and treat lover.",
     hasBeenSwiped: false,
     hasBeenLiked: false,
-    attribute: "",
+    attribute: "Photo by Will Gardiner on Unsplash",
   },
   {
     name: "Jani",

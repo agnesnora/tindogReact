@@ -10,7 +10,9 @@ export default function DogCard(props) {
         style={{ backgroundImage: `url(${currentDog.avatar})` }}
       >
         <div className="content">
-          <h1>{currentDog.name}</h1>
+          <h1>
+            {currentDog.name}, {currentDog.age}
+          </h1>
           <p>{currentDog.bio}</p>
         </div>
       </div>
