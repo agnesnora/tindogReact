@@ -26,34 +26,32 @@ body {
   text-align: left;
   padding: 0.2em 1em;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff; 
+  color: #fff;
   margin-left: 1em;
   margin-bottom: 1em;
   border-radius: 18px;
 }
 .content > h1 {
   margin: 0;
-  font-size:1.5em;
+  font-size: 1.5em;
 }
-.content>p{
-  margin-top:0.2em;
+.content > p {
+  margin-top: 0.2em;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 header > .icon {
-  
   margin-bottom: 0.5rem;
 }
 
-header>img{
-  width:4rem;
-  margin-bottom:0.5em;
+header > img {
+  width: 4rem;
+  margin-bottom: 0.5em;
 }
 
 .person,
@@ -64,7 +62,6 @@ header>img{
 
 .like-badge,
 .dismiss-badge {
-  
   position: absolute;
   transform: rotate(-30deg);
   top: 80px;
@@ -104,8 +101,7 @@ header>img{
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  border: 10px solid rgb(232, 45, 112); */
- 
+  border: 10px solid rgb(232, 45, 112);
 }
 
 footer {
@@ -165,28 +161,33 @@ button {
   color: #fff;
   padding: 1em;
 }
+.profile-picture {
+  background-image: url("/images/catProfile.jpg");
+  height: 4em;
+  width: 4em;
+  background-size: cover;
+  border-radius: 50%;
+}
 
-@media (min-width:760px){
-  body{
-    width:70vw;
-    margin:0 auto;
+@media (min-width: 760px) {
+  body {
+    width: 70vw;
+    margin: 0 auto;
   }
-  .dogCard-container{
-    height:80vh;
-   
+  .dogCard-container {
+    height: 80vh;
   }
   .like-badge,
-.dismiss-badge {
-  
-  position: absolute;
-  transform: rotate(-30deg);
-  top: 10%;
-  left: 35%;
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 30px 30px 30px 30px;
-  font-size: 4rem;
-  font-weight: 600;
-  padding: 0.2rem 1.5rem;
-}
+  .dismiss-badge {
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 10%;
+    left: 35%;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 0.2rem 1.5rem;
+  }
 }

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DogList from "./components/DogList";
 import Profile from "./components/Profile";
+// import cat from "../public/images/catProfile.jpg";
 
 import { dogs } from "./data";
 
