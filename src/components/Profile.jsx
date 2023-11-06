@@ -1,6 +1,9 @@
 import DogList from "./DogList";
 
 export default function Profile({ handleClear, dogsLiked }) {
+  //   function getDogDetails() {
+  //     console.log("details");
+  //   }
   return (
     <div>
       <h2>Dogs you liked</h2>
