@@ -6,9 +6,14 @@ export default function Profile({ handleClear, dogsLiked }) {
   //   }
   return (
     <div>
-      <div className="profile-picture">
-        {/* <img className="profile-picture" src="../images/catProfile.jpg" /> */}
-      </div>
+      {/* <div className="profile-info">
+        <div className="profile-picture"></div>
+        <div className="profile-hero">
+          <h4>Cili, 26</h4>
+          <p>Hungary, Miskolc</p>
+        </div>
+      </div> */}
+
       <h2>Dogs you liked</h2>
       <p>hover and click to know them better</p>
       <div className="dogList-container">

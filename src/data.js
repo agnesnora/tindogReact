@@ -6,16 +6,20 @@ const dogs = [
     bio: "Art. Literature. Natural wine. Yoga.",
     hasBeenSwiped: false,
     hasBeenLiked: false,
+    attribute: "",
+    id: 1,
   },
 
   {
     name: "Teddy",
-    avatar: "/images/dog-teddy.jpg",
+    avatar: "/images/vinci.jpg",
     age: 43,
     bio: "Chasing squirrels is my jam. Want to join?",
     hasBeenSwiped: false,
     hasBeenLiked: false,
-    attribute: "",
+    attribute:
+      "https://unsplash.com/@o5ky?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+    id: 2,
   },
   {
     name: "Miri",
@@ -26,6 +30,7 @@ const dogs = [
     hasBeenLiked: false,
     attribute:
       "https://unsplash.com/@richardbrutyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+    id: 3,
   },
   {
     name: "Dodi",
@@ -36,6 +41,7 @@ const dogs = [
     hasBeenLiked: false,
     attribute:
       "https://unsplash.com/@richardbrutyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+    id: 4,
   },
   {
     name: "Daisy",
@@ -46,6 +52,7 @@ const dogs = [
     hasBeenLiked: false,
     attribute:
       "https://unsplash.com/@erdaest?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+    id: 5,
   },
   {
     name: "Rudi",
@@ -55,6 +62,7 @@ const dogs = [
     hasBeenSwiped: false,
     hasBeenLiked: false,
     attribute: "Image by bublikhaus on Freepik",
+    id: 6,
   },
   {
     name: "Reddy",
@@ -64,6 +72,7 @@ const dogs = [
     hasBeenSwiped: false,
     hasBeenLiked: false,
     attribute: "Image by master1305 on Freepik",
+    id: 7,
   },
   {
     name: "Pumi",
@@ -73,6 +82,7 @@ const dogs = [
     hasBeenSwiped: false,
     hasBeenLiked: false,
     attribute: "Photo by Will Gardiner on Unsplash",
+    id: 8,
   },
   {
     name: "Jani",
@@ -82,6 +92,7 @@ const dogs = [
     hasBeenSwiped: false,
     hasBeenLiked: false,
     attribute: "Photo by Jamie Street on Unsplash",
+    id: 9,
   },
 ];
 

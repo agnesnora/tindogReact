@@ -13,6 +13,7 @@ function App() {
   const [dogsData, setDogsData] = useState({});
   const [dogsDataClone, setDogsDataClone] = useState(dogs);
   const [currentDog, setCurrentDog] = useState(dogs[0]);
+  const [isNewGame, setIsNewGame] = useState(false);
 
   const [myDogs, setMyDogs] = useState([]);
   const [profileOn, setProfileOn] = useState(false);
@@ -20,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setDogsData(dogs);
-  }, []);
+  }, [isNewGame]);
 
   useEffect(() => {
     const savedDogs = JSON.parse(localStorage.getItem("dogs"));
@@ -31,7 +32,7 @@ function App() {
 
   function showMyDogs() {
     setProfileOn(true);
-    console.log(profileOn);
+
     const savedDogs = JSON.parse(localStorage.getItem("dogs"));
     if (savedDogs) {
       setMyDogs(savedDogs);
@@ -39,7 +40,7 @@ function App() {
   }
 
   const handleLike = () => {
-    let currentIndex = dogsDataClone.indexOf(currentDog);
+    let currentIndex = dogsData.indexOf(currentDog);
     const updatedCurrentDog = {
       ...currentDog,
       hasBeenLiked: true,
@@ -48,13 +49,12 @@ function App() {
     const updatedDogs = [...myDogs, currentDog];
     setMyDogs(updatedDogs);
     localStorage.setItem("dogs", JSON.stringify(updatedDogs));
+    setDogsData((prevData) =>
+      prevData.filter((item) => item.id !== currentDog.id)
+    );
 
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
-      // setDogsLiked([...dogsLiked, updatedCurrentDog]);
-      // setMyDogs(dogsLiked);
-      // localStorage.setItem("dogs", JSON.stringify(dogsLiked));
-      // saveMyDogs();
     }, 1000);
   };
 
@@ -65,6 +65,7 @@ function App() {
       ...currentDog,
       hasBeenSwiped: true,
     };
+
     setCurrentDog(updatedCurrentDog);
     setTimeout(() => {
       setCurrentDog(dogsData[currentIndex + 1]);
@@ -72,15 +73,20 @@ function App() {
   }
 
   function startOver() {
-    setCurrentDog(dogs[0]);
-    // setDogsLiked([]);
+    setIsNewGame(true);
+    setCurrentDog(dogsData[0]);
+
+    setProfileOn(false);
+  }
+  function checkAgain() {
+    setCurrentDog(dogsData[0]);
+
     setProfileOn(false);
   }
 
   function handleClear() {
     setMyDogs([]);
     localStorage.removeItem("dogs");
-    console.log(myDogs);
   }
 
   return (
@@ -99,9 +105,9 @@ function App() {
         <>
           {" "}
           <p>No more dogs in your area</p>
-          <div className="dogList-container">
+          {/* <div className="dogList-container">
             <DogList dogsLiked={myDogs} />
-          </div>
+          </div> */}
         </>
       )}
 
@@ -109,7 +115,7 @@ function App() {
         currentDog={currentDog}
         handleLike={handleLike}
         handleDismiss={handleDismiss}
-        refresh={startOver}
+        refresh={checkAgain}
       />
     </div>
   );

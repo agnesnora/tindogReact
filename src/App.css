@@ -43,8 +43,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 0;
 }
-
+/* .item {
+  flex: 1;
+  text-align: center;
+} */
 header > .icon {
   margin-bottom: 0.5rem;
 }
@@ -52,6 +56,7 @@ header > .icon {
 header > img {
   width: 4rem;
   margin-bottom: 0.5em;
+  margin-right: 3em;
 }
 
 .person,
@@ -161,12 +166,31 @@ button {
   color: #fff;
   padding: 1em;
 }
+.profile {
+  display: flex;
+  align-items: center;
+}
 .profile-picture {
   background-image: url("/images/catProfile.jpg");
-  height: 4em;
-  width: 4em;
+  height: 1.2em;
+  width: 1.2em;
   background-size: cover;
   border-radius: 50%;
+}
+.profile-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.profile-hero {
+  margin-left: 0.2em;
+  text-align: left;
+}
+.profile-hero > p,
+.profile-hero > h4 {
+  margin: 0;
+  font-size: 0.7em;
 }
 
 @media (min-width: 760px) {
