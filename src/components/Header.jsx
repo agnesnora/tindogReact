@@ -1,6 +1,6 @@
 import { HiChatBubbleOvalLeft } from "react-icons/hi2";
 
-export default function Header({ showMyDogs, startOver }) {
+export default function Header({ showMyDogs, startOver, checkMessages }) {
   return (
     <>
       <header>
@@ -16,7 +16,7 @@ export default function Header({ showMyDogs, startOver }) {
 
         <img src="/images/paw.png" onClick={startOver} />
 
-        <HiChatBubbleOvalLeft className="icon chat" />
+        <HiChatBubbleOvalLeft className="icon chat" onClick={checkMessages} />
       </header>
     </>
   );

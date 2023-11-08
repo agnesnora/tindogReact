@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import DogList from "./components/DogList";
 import Profile from "./components/Profile";
+import Messages from "./components/Messages";
 // import cat from "../public/images/catProfile.jpg";
 
 import { dogs } from "./data";
@@ -16,6 +17,7 @@ function App() {
   const [isNewGame, setIsNewGame] = useState(false);
   const [myDogs, setMyDogs] = useState([]);
   const [profileOn, setProfileOn] = useState(false);
+  const [messageOn, setMessageOn] = useState(false);
 
   useEffect(() => {
     setDogsData(dogs);
@@ -30,6 +32,7 @@ function App() {
 
   function showMyDogs() {
     setProfileOn(true);
+    setMessageOn(false);
 
     const savedDogs = JSON.parse(localStorage.getItem("dogs"));
     if (savedDogs) {
@@ -87,11 +90,24 @@ function App() {
     localStorage.removeItem("dogs");
   }
 
+  function checkMessages() {
+    setMessageOn(true);
+    console.log(messageOn);
+    console.log("cilike");
+  }
+
   return (
     <div className="main-container">
       {/* <Profile handleClear={handleClear} myDogs={myDogs} /> */}
-      <Header showMyDogs={showMyDogs} startOver={startOver} />
-      {currentDog && !profileOn ? (
+
+      <Header
+        showMyDogs={showMyDogs}
+        startOver={startOver}
+        checkMessages={checkMessages}
+      />
+      {messageOn ? (
+        <Messages />
+      ) : currentDog && !profileOn ? (
         <DogCard
           currentDog={currentDog}
           liked={currentDog.hasBeenLiked}
