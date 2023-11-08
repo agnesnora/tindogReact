@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import DogCard from "./components/DogCard";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import DogList from "./components/DogList";
+// import DogList from "./components/DogList";
 import Profile from "./components/Profile";
 // import cat from "../public/images/catProfile.jpg";
 
@@ -11,13 +11,11 @@ import { dogs } from "./data";
 
 function App() {
   const [dogsData, setDogsData] = useState({});
-  const [dogsDataClone, setDogsDataClone] = useState(dogs);
+  // const [dogsDataClone, setDogsDataClone] = useState(dogs);
   const [currentDog, setCurrentDog] = useState(dogs[0]);
   const [isNewGame, setIsNewGame] = useState(false);
-
   const [myDogs, setMyDogs] = useState([]);
   const [profileOn, setProfileOn] = useState(false);
-  console.log(myDogs);
 
   useEffect(() => {
     setDogsData(dogs);
@@ -91,7 +89,7 @@ function App() {
 
   return (
     <div className="main-container">
-      {/* <Profile handleClear={handleClear} dogsLiked={myDogs} /> */}
+      {/* <Profile handleClear={handleClear} myDogs={myDogs} /> */}
       <Header showMyDogs={showMyDogs} startOver={startOver} />
       {currentDog && !profileOn ? (
         <DogCard
@@ -100,23 +98,28 @@ function App() {
           swiped={currentDog.hasBeenSwiped}
         />
       ) : profileOn ? (
-        <Profile handleClear={handleClear} dogsLiked={myDogs} />
+        <Profile
+          handleClear={handleClear}
+          myDogs={myDogs}
+          checkAgain={checkAgain}
+        />
       ) : (
         <>
           {" "}
           <p>No more dogs in your area</p>
           {/* <div className="dogList-container">
-            <DogList dogsLiked={myDogs} />
+            <DogList myDogs={myDogs} />
           </div> */}
         </>
       )}
-
-      <Footer
-        currentDog={currentDog}
-        handleLike={handleLike}
-        handleDismiss={handleDismiss}
-        refresh={checkAgain}
-      />
+      {currentDog && !profileOn ? (
+        <Footer
+          currentDog={currentDog}
+          handleLike={handleLike}
+          handleDismiss={handleDismiss}
+          refresh={checkAgain}
+        />
+      ) : null}
     </div>
   );
 }
