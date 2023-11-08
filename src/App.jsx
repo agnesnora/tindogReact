@@ -107,9 +107,11 @@ function App() {
         <>
           {" "}
           <p>No more dogs in your area</p>
-          {/* <div className="dogList-container">
-            <DogList myDogs={myDogs} />
-          </div> */}
+          <Profile
+            handleClear={handleClear}
+            myDogs={myDogs}
+            checkAgain={checkAgain}
+          />
         </>
       )}
       {currentDog && !profileOn ? (
