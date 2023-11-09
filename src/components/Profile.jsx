@@ -14,7 +14,11 @@ export default function Profile({
   const [hoveredDogId, setHoveredDogId] = useState(null);
   const [popUpOn, setPopUpOn] = useState(false);
   const [toDog, setToDog] = useState("");
-  const [messageValue, setMessageValue] = useState({ to: "", text: "" });
+  const [messageValue, setMessageValue] = useState({
+    to: "",
+    text: "",
+    img: "",
+  });
 
   function mouseEnter(e) {
     const detailedId = e.target.dataset.id;

@@ -14,7 +14,11 @@ export default function PopUp({
   }
 
   function typeMessage(e) {
-    setMessageValue({ to: toDog.name, text: e.target.value });
+    setMessageValue({
+      to: toDog.name,
+      text: e.target.value,
+      img: toDog.avatar,
+    });
   }
   return (
     <div className="popUp">

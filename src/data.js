@@ -96,4 +96,22 @@ const dogs = [
   },
 ];
 
-export { dogs };
+const inbox = [
+  {
+    from: "Jani",
+    text: "Hi! You are a cat, but I don't mind. Do you like cheese?",
+    img: "/images/jamie.jpg",
+  },
+  {
+    from: "Rudi",
+    text: "Hi! I like your profile picture, wanna grab a coffee?",
+    img: "/images/dog-basenji.jpg",
+  },
+  {
+    from: "Dodi",
+    text: "Hey! Nice to see you here buddy. WHat's up?",
+    img: "/images/doodle.jpg",
+  },
+];
+
+export { dogs, inbox };

@@ -147,7 +147,7 @@ function App() {
           />
         </>
       )}
-      {currentDog && !profileOn ? (
+      {currentDog && !profileOn && !messageOn ? (
         <Footer
           currentDog={currentDog}
           handleLike={handleLike}

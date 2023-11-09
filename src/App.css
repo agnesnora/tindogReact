@@ -237,6 +237,42 @@ form > textarea {
   background-size: cover;
   border-radius: 50%;
 }
+.message-avatar {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.mail-container {
+  padding: 0.5rem;
+}
+.mail-container h3 {
+  text-align: left;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #eff0f3;
+  border-radius: 18px;
+  margin-bottom: 1em;
+}
+.message-content {
+  padding: 0.2em;
+  margin-left: 0.5em;
+  text-align: left;
+}
+
+.message-content > h4 {
+  margin-bottom: 0.2rem;
+  margin-top: 0;
+}
+.message-content > p {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
 .profile-info {
   display: flex;
   justify-content: left;
