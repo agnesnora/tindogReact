@@ -18,13 +18,22 @@ export default function Profile({ handleClear, myDogs, checkAgain }) {
 
   function sendMessage(id) {
     setToDog(myDogs.filter((item) => item.id == id)[0]);
-
     setPopUpOn(true);
   }
+
+  if (myDogs.length == 0) {
+    return (
+      <>
+        <h3>You have no dogs saved in your profile</h3>
+        <p>to see the dogs in your area click on the paw icon</p>
+      </>
+    );
+  }
+
   return (
     <div>
       <h2>Dogs you liked</h2>
-      <p>hover and click to know them better</p>
+      <p>hover and click to send a message</p>
 
       <div className="dogList-container">
         {myDogs.map((dog) => {

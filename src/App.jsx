@@ -47,15 +47,21 @@ function App() {
       hasBeenLiked: true,
     };
     setCurrentDog(updatedCurrentDog);
-    const updatedDogs = [...myDogs, currentDog];
+    const isAlreadyLiked = myDogs.some((dog) => dog.id == updatedCurrentDog.id);
+    const updatedDogs = isAlreadyLiked
+      ? [...myDogs]
+      : [...myDogs, updatedCurrentDog];
+    console.log("updateddogs", updatedDogs);
     setMyDogs(updatedDogs);
     localStorage.setItem("dogs", JSON.stringify(updatedDogs));
     setDogsData((prevData) =>
       prevData.filter((item) => item.id !== currentDog.id)
     );
+    console.log("in like dogsData", dogsData);
 
     setTimeout(() => {
-      setCurrentDog(dogsData[currentIndex + 1]);
+      const nextIndex = currentIndex + 1;
+      setCurrentDog(nextIndex < dogsData.length ? dogsData[nextIndex] : null);
     }, 1000);
   };
 
@@ -75,18 +81,25 @@ function App() {
 
   function startOver() {
     setIsNewGame(true);
+    setDogsData(dogs);
+
     setCurrentDog(dogsData[0]);
 
     setProfileOn(false);
   }
   function checkAgain() {
-    setCurrentDog(dogsData[0]);
+    console.log("myDogs in checkagain", myDogs);
+    console.log("dogsData", dogsData);
+    dogsData.length > 0 ? setCurrentDog(dogsData[0]) : null;
+
+    // setCurrentDog(dogsData[0]);
 
     setProfileOn(false);
   }
 
   function handleClear() {
     setMyDogs([]);
+    setIsNewGame(true);
     localStorage.removeItem("dogs");
   }
 
@@ -122,7 +135,7 @@ function App() {
       ) : (
         <>
           {" "}
-          <p>No more dogs in your area</p>
+          {myDogs.length == 0 ? <p>No more dogs in your area</p> : ""}
           <Profile
             handleClear={handleClear}
             myDogs={myDogs}
