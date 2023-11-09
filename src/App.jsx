@@ -18,10 +18,11 @@ function App() {
   const [myDogs, setMyDogs] = useState([]);
   const [profileOn, setProfileOn] = useState(false);
   const [messageOn, setMessageOn] = useState(false);
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     setDogsData(dogs);
-  }, [isNewGame]);
+  }, []);
 
   useEffect(() => {
     const savedDogs = JSON.parse(localStorage.getItem("dogs"));
@@ -51,13 +52,12 @@ function App() {
     const updatedDogs = isAlreadyLiked
       ? [...myDogs]
       : [...myDogs, updatedCurrentDog];
-    console.log("updateddogs", updatedDogs);
+
     setMyDogs(updatedDogs);
     localStorage.setItem("dogs", JSON.stringify(updatedDogs));
     setDogsData((prevData) =>
       prevData.filter((item) => item.id !== currentDog.id)
     );
-    console.log("in like dogsData", dogsData);
 
     setTimeout(() => {
       const nextIndex = currentIndex + 1;
@@ -80,16 +80,15 @@ function App() {
   }
 
   function startOver() {
-    setIsNewGame(true);
-    setDogsData(dogs);
-
-    setCurrentDog(dogsData[0]);
+    if (dogsData.length == 0) {
+      return <h1>no more dogs,come back later</h1>;
+    } else {
+      setCurrentDog(dogsData[0]);
+    }
 
     setProfileOn(false);
   }
   function checkAgain() {
-    console.log("myDogs in checkagain", myDogs);
-    console.log("dogsData", dogsData);
     dogsData.length > 0 ? setCurrentDog(dogsData[0]) : null;
 
     // setCurrentDog(dogsData[0]);
@@ -99,14 +98,13 @@ function App() {
 
   function handleClear() {
     setMyDogs([]);
-    setIsNewGame(true);
+    setDogsData(dogs);
+
     localStorage.removeItem("dogs");
   }
 
   function checkMessages() {
     setMessageOn(true);
-    console.log(messageOn);
-    console.log("cilike");
   }
 
   return (
@@ -119,7 +117,7 @@ function App() {
         checkMessages={checkMessages}
       />
       {messageOn ? (
-        <Messages />
+        <Messages messages={messages} />
       ) : currentDog && !profileOn ? (
         <DogCard
           currentDog={currentDog}
@@ -131,6 +129,9 @@ function App() {
           handleClear={handleClear}
           myDogs={myDogs}
           checkAgain={checkAgain}
+          dogsData={dogsData}
+          setMessages={setMessages}
+          messages={messages}
         />
       ) : (
         <>
@@ -140,6 +141,9 @@ function App() {
             handleClear={handleClear}
             myDogs={myDogs}
             checkAgain={checkAgain}
+            dogsData={dogsData}
+            setMessages={setMessages}
+            messages={messages}
           />
         </>
       )}

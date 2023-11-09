@@ -1,15 +1,20 @@
 import { useState } from "react";
 
-export default function PopUp({ setPopUpOn, toDog }) {
-  const [messageValue, setMessageValue] = useState({ to: "", text: "" });
-
-  function send() {
+export default function PopUp({
+  setPopUpOn,
+  toDog,
+  sendMessage,
+  setMessageValue,
+  messageValue,
+}) {
+  function send(e) {
+    e.preventDefault();
+    sendMessage(messageValue);
     setPopUpOn(false);
   }
 
   function typeMessage(e) {
     setMessageValue({ to: toDog.name, text: e.target.value });
-    console.log(messageValue);
   }
   return (
     <div className="popUp">
