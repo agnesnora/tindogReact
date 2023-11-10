@@ -106,7 +106,10 @@ function App() {
   function checkMessages() {
     setMessageOn(true);
   }
-
+  function deleteMessage(array, message) {
+    setMessages(array.filter((message) => !message));
+    console.log("array", array);
+  }
   return (
     <div className="main-container">
       {/* <Profile handleClear={handleClear} myDogs={myDogs} /> */}
@@ -117,7 +120,11 @@ function App() {
         checkMessages={checkMessages}
       />
       {messageOn ? (
-        <Messages messages={messages} />
+        <Messages
+          setMessages={setMessages}
+          messages={messages}
+          deleteMessage={deleteMessage}
+        />
       ) : currentDog && !profileOn ? (
         <DogCard
           currentDog={currentDog}

@@ -264,7 +264,9 @@ form > textarea {
   margin-left: 0.5em;
   text-align: left;
 }
-
+.no-sent {
+  text-align: left;
+}
 .message-content > h4 {
   margin-bottom: 0.2rem;
   margin-top: 0;

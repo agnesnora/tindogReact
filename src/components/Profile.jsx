@@ -1,7 +1,8 @@
 // import DogList from "./DogList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import PopUp from "./PopUp";
+import { nanoid } from "nanoid";
 
 export default function Profile({
   handleClear,
@@ -19,6 +20,13 @@ export default function Profile({
     text: "",
     img: "",
   });
+  useEffect(() => {
+    const savedSentMessages = JSON.parse(localStorage.getItem("sentMessage"));
+    if (savedSentMessages) {
+      setMessages(savedSentMessages);
+      console.log("useEffectben", messages);
+    }
+  }, []);
 
   function mouseEnter(e) {
     const detailedId = e.target.dataset.id;
@@ -42,13 +50,15 @@ export default function Profile({
       </>
     );
   }
-
-  const handleSendMessage = (message) => {
-    // Implement logic to send the message (e.g., update messages array)
-    console.log("Sending message:", message);
-    setMessages((prevMessages) => [...prevMessages, message]);
-    console.log(messages);
-  };
+  function handleSendMessage(message) {
+    setMessages((prevMessages) => {
+      const messageWithId = { ...message, id: nanoid() };
+      const updatedMessages = [...prevMessages, messageWithId];
+      localStorage.setItem("sentMessage", JSON.stringify(updatedMessages));
+      console.log(updatedMessages);
+      return updatedMessages;
+    });
+  }
 
   return (
     <div>
