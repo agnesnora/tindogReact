@@ -331,6 +331,12 @@ textarea {
 }
 .sent {
   background-color: #d4d8f0;
+  display: flex;
+  justify-content: space-between;
+}
+.delete-line {
+  background-color: transparent;
+  padding: 1.2em;
 }
 .message-content {
   padding: 0.2em;
@@ -348,8 +354,11 @@ textarea {
   text-align: left;
 }
 .message-content > h4 {
-  margin-bottom: 0.2rem;
-  margin-top: 0;
+  margin: 0.2rem;
+}
+.message-container-sent-wrapper {
+  display: flex;
+  align-items: center;
 }
 .message-content > p {
   margin-top: 0;

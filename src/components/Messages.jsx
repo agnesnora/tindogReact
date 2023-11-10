@@ -50,15 +50,23 @@ export default function Messages({ setMessages, messages }) {
   const sentMessageEl = messages.map((mes) => (
     <>
       <div className="message-container sent">
-        <div
-          className="message-avatar"
-          style={{ backgroundImage: `url(${mes.img})` }}
-        ></div>
-        <div className="message-content">
-          <h4>To:{mes.to}</h4>
-          <p>{mes.text}</p>
+        <div className="message-container-sent-wrapper">
+          <div
+            className="message-avatar"
+            style={{ backgroundImage: `url(${mes.img})` }}
+          ></div>
+          <div className="message-content">
+            <h4>To:{mes.to}</h4>
+            <p>{mes.text}</p>
+          </div>
         </div>
-        <button onClick={() => deleteMessage(messages, mes.id)}>x</button>
+
+        <button
+          className="delete-line"
+          onClick={() => deleteMessage(messages, mes.id)}
+        >
+          x
+        </button>
       </div>
     </>
   ));
