@@ -398,15 +398,19 @@ textarea {
 }
 
 .profile-footer {
-  display: flex;
-  justify-content: space-evenly;
   margin: 1em;
 }
+
 .btn {
   font-weight: 500;
   font-size: 1rem;
-  padding: 1em;
+  padding: 0.7em;
   border-radius: 8px;
+  display: block;
+  margin-bottom: 0.6rem;
+  margin-left: 0;
+  background-color: #d4d8f0;
+  color: #232946;
 }
 
 @media (min-width: 760px) {
