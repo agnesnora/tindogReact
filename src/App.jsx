@@ -80,6 +80,7 @@ function App() {
   }
 
   function startOver() {
+    messageOn ? setMessageOn(false) : null;
     if (dogsData.length == 0) {
       return <h1>no more dogs,come back later</h1>;
     } else {
@@ -116,6 +117,7 @@ function App() {
         showMyDogs={showMyDogs}
         startOver={startOver}
         checkMessages={checkMessages}
+        // setMessageOn={setMessageOn}
       />
       {messageOn ? (
         <Messages setMessages={setMessages} messages={messages} />
