@@ -49,7 +49,7 @@ export default function Messages({ setMessages, messages }) {
 
   const sentMessageEl = messages.map((mes) => (
     <>
-      <div className="message-container">
+      <div className="message-container sent">
         <div
           className="message-avatar"
           style={{ backgroundImage: `url(${mes.img})` }}
@@ -80,15 +80,7 @@ export default function Messages({ setMessages, messages }) {
           Clear sent messages
         </button>
       </div>
-      {/* {messagesLoaded ? (
-        messages.length > 0 ? (
-          <div className="message-element">{sentMessageEl}</div>
-        ) : (
-          <p className="no-sent">No messages.</p>
-        )
-      ) : (
-        <p>Loading messages...</p>
-      )} */}
+
       {messages.length == 0 ? (
         <p className="no-sent">No messages.</p>
       ) : messagesLoaded && messages.length > 0 ? (

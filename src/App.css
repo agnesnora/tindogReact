@@ -322,6 +322,9 @@ textarea {
   border-radius: 18px;
   margin-bottom: 1em;
 }
+.sent {
+  background-color: #d4d8f0;
+}
 .message-content {
   padding: 0.2em;
   margin-left: 0.5em;
@@ -390,5 +393,8 @@ textarea {
     font-size: 4rem;
     font-weight: 600;
     padding: 0.2rem 1.5rem;
+  }
+  .popUp {
+    max-width: 500px;
   }
 }
