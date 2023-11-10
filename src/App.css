@@ -211,6 +211,13 @@ footer button {
   margin: 1em auto;
   width: 100%;
 }
+
+.clear-btn {
+  background-color: #fffffe;
+  border-radius: 12px;
+  margin-bottom: 0.6em;
+  padding: 0 2em;
+}
 textarea {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -333,6 +340,9 @@ textarea {
 .messages-header {
   display: flex;
   justify-content: space-between;
+}
+.messages-header h3 {
+  margin-top: 0;
 }
 .no-sent {
   text-align: left;

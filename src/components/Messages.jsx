@@ -77,7 +77,7 @@ export default function Messages({ setMessages, messages }) {
         {" "}
         <h3>Sent</h3>
         <button onClick={handleClearSentFromLocal} className="clear-btn">
-          Clear sent messages
+          Clear sent
         </button>
       </div>
 
