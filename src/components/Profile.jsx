@@ -20,13 +20,13 @@ export default function Profile({
     text: "",
     img: "",
   });
-  useEffect(() => {
-    const savedSentMessages = JSON.parse(localStorage.getItem("sentMessage"));
-    if (savedSentMessages) {
-      setMessages(savedSentMessages);
-      console.log("useEffectben", messages);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedSentMessages = JSON.parse(localStorage.getItem("sentMessage"));
+  //   if (savedSentMessages) {
+  //     setMessages(savedSentMessages);
+  //     console.log("useEffectben", messages);
+  //   }
+  // }, []);
 
   function mouseEnter(e) {
     const detailedId = e.target.dataset.id;
@@ -61,7 +61,7 @@ export default function Profile({
   }
 
   return (
-    <div>
+    <div className="dogs-liked-container">
       {dogsData.length == 0 ? (
         <p>There are no more new dogs in your area, check back later</p>
       ) : null}
@@ -81,8 +81,11 @@ export default function Profile({
               <img src={dog.avatar} data-id={dog.id} className="dog-img" />
               <div className="dog-text">
                 {hoveredDogId == dog.id ? (
-                  <button onClick={() => sendMessage(hoveredDogId)}>
-                    <BsFillEnvelopeAtFill /> to {dog.name}
+                  <button
+                    className="send-todog-btn"
+                    onClick={() => sendMessage(hoveredDogId)}
+                  >
+                    <BsFillEnvelopeAtFill />
                   </button>
                 ) : null}
               </div>

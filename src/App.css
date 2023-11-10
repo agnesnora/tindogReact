@@ -350,6 +350,23 @@ textarea {
 .messages-header h3 {
   margin-top: 0;
 }
+.dogs-liked-container {
+  padding: 1em;
+}
+.send-todog-btn {
+  padding: 0.4em;
+  margin-top: 0.3em;
+  width: 100%;
+  background: rgb(232, 45, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 45, 112, 1) 62%,
+    rgba(240, 105, 87, 1) 100%
+  );
+  color: #fffffe;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
 .no-sent {
   text-align: left;
 }
