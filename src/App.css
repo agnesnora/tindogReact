@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #root {
   text-align: center;
 }
@@ -148,7 +152,41 @@ footer button {
   margin: 0 auto;
   align-items: center;
   justify-items: center;
+  position: relative;
 }
+.popUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: #eff0f3;
+  border-radius: 18px;
+  padding: 2rem 0.8rem;
+}
+
+.popUp form {
+  width: 100%;
+  margin: 0 auto;
+}
+form > button {
+  display: block;
+  text-align: center;
+  margin: 1em auto 0;
+}
+
+.message-toDog {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+}
+
 .dog-liked > img {
   max-height: 30vh;
   border-radius: 18px;
@@ -199,15 +237,15 @@ footer button {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.popUp form {
+/* .popUp form {
   background-color: aquamarine;
   padding: 2em;
-}
+} */
 
-form > textarea {
+/* form > textarea {
   width: 100%;
   height: 100%;
-}
+} */
 
 .main-conainer {
   margin: 0 auto;
@@ -263,6 +301,10 @@ form > textarea {
   padding: 0.2em;
   margin-left: 0.5em;
   text-align: left;
+}
+.messages-header {
+  display: flex;
+  justify-content: space-between;
 }
 .no-sent {
   text-align: left;

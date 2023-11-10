@@ -20,16 +20,28 @@ export default function PopUp({
       img: toDog.avatar,
     });
   }
+
+  function closePopUp() {
+    setPopUpOn(false);
+  }
   return (
     <div className="popUp">
-      <form>
+      <div className="message-toDog">
+        <h3>Message to {toDog.name}</h3>
+        <div
+          className="message-avatar"
+          style={{ backgroundImage: `url(${toDog.avatar})`, marginLeft: "1em" }}
+        ></div>
+        <button onClick={closePopUp}>Close</button>
+      </div>
+      <form onSubmit={send}>
         <textarea
           value={messageValue.text}
           onChange={typeMessage}
-          rows={4}
+          rows={10}
           placeholder="Type your message"
         ></textarea>
-        <button onClick={send}>Send</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );

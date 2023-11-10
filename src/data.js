@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 const dogs = [
   {
     name: "Rex",
@@ -71,7 +73,8 @@ const dogs = [
     bio: "Active and playful. Let's have fun together!",
     hasBeenSwiped: false,
     hasBeenLiked: false,
-    attribute: "Image by master1305 on Freepik",
+    attribute:
+      "https://unsplash.com/@anderjb?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     id: 7,
   },
   {
@@ -101,16 +104,19 @@ const inbox = [
     from: "Jani",
     text: "Hi! You are a cat, but I don't mind. Do you like cheese?",
     img: "/images/jamie.jpg",
+    id: nanoid(),
   },
   {
     from: "Rudi",
     text: "Hi! I like your profile picture, wanna grab a coffee?",
     img: "/images/dog-basenji.jpg",
+    id: nanoid(),
   },
   {
     from: "Dodi",
-    text: "Hey! Nice to see you here buddy. WHat's up?",
+    text: "Hey Cili! Nice to see you here buddy. WHat's up?",
     img: "/images/doodle.jpg",
+    id: nanoid(),
   },
 ];
 
