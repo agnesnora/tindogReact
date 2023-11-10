@@ -160,31 +160,62 @@ footer button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  background-color: #eff0f3;
+  /* background-color: #eff0f3; */
+  background-color: #d4d8f0;
   border-radius: 18px;
-  padding: 2rem 0.8rem;
+  padding: 2rem;
 }
 
 .popUp form {
   width: 100%;
   margin: 0 auto;
 }
-form > button {
-  display: block;
-  text-align: center;
-  margin: 1em auto 0;
-}
+/* form > button {
+  
+} */
 
 .message-toDog {
   display: flex;
-  margin: 0 auto;
+  margin: 0.7em auto;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  color: #232946;
+  background-color: #fffffe;
+  border-radius: 12px;
 }
-
+.message-toDog h5 {
+  margin: 0;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.closePopUp-btn-container {
+  display: flex;
+  justify-content: end;
+}
+.closePopUp-btn {
+  display: flex;
+  background-color: transparent;
+  border: #232946 1.5px solid;
+  border-radius: 12px;
+  padding: 0.4em 1em;
+}
+.send-btn {
+  background-color: #232946;
+  color: #d4d8f0;
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+}
 textarea {
-  width: 80%;
+  width: 100%;
   font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  border: none;
 }
 
 .dog-liked > img {
@@ -194,12 +225,10 @@ textarea {
 
 .dog-liked {
   position: relative;
-  /* width: 70%; */
-  /* background-color: #e7f0ed; */
+
   padding: 0.5em;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* margin-bottom: 1em; */
 }
 .dog-liked:hover .dog-img {
   opacity: 0.3;
@@ -237,16 +266,6 @@ textarea {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/* .popUp form {
-  background-color: aquamarine;
-  padding: 2em;
-} */
-
-/* form > textarea {
-  width: 100%;
-  height: 100%;
-} */
-
 .main-conainer {
   margin: 0 auto;
 }
@@ -278,6 +297,12 @@ textarea {
 .message-avatar {
   height: 3em;
   width: 3em;
+  border-radius: 50%;
+  background-size: cover;
+}
+.message-avatar-small {
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
   background-size: cover;
 }

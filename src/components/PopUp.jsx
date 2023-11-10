@@ -26,13 +26,18 @@ export default function PopUp({
   }
   return (
     <div className="popUp">
+      <div className="closePopUp-btn-container">
+        <button className="closePopUp-btn" onClick={closePopUp}>
+          Close
+        </button>
+      </div>
+
       <div className="message-toDog">
-        <h3>Message to {toDog.name}</h3>
         <div
-          className="message-avatar"
-          style={{ backgroundImage: `url(${toDog.avatar})`, marginLeft: "1em" }}
+          className="message-avatar-small"
+          style={{ backgroundImage: `url(${toDog.avatar})`, margin: "0 0.5em" }}
         ></div>
-        <button onClick={closePopUp}>Close</button>
+        <h5>Message to {toDog.name}</h5>
       </div>
       <form onSubmit={send}>
         <textarea
@@ -41,7 +46,9 @@ export default function PopUp({
           rows={10}
           placeholder="Type your message"
         ></textarea>
-        <button type="submit">Send</button>
+        <button className="send-btn" type="submit">
+          Send
+        </button>
       </form>
     </div>
   );
