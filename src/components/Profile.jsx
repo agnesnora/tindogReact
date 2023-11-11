@@ -81,12 +81,16 @@ export default function Profile({
               <img src={dog.avatar} data-id={dog.id} className="dog-img" />
               <div className="dog-text">
                 {hoveredDogId == dog.id ? (
-                  <button
-                    className="send-todog-btn"
-                    onClick={() => sendMessage(hoveredDogId)}
-                  >
-                    <BsFillEnvelopeAtFill />
-                  </button>
+                  <div>
+                    {" "}
+                    <h3>{dog.name}</h3>
+                    <button
+                      className="send-todog-btn"
+                      onClick={() => sendMessage(hoveredDogId)}
+                    >
+                      <BsFillEnvelopeAtFill />
+                    </button>
+                  </div>
                 ) : null}
               </div>
             </div>
@@ -105,7 +109,7 @@ export default function Profile({
       <div className="profile-footer">
         {" "}
         <button className="btn" onClick={handleClear}>
-          Clear
+          Clear all
         </button>
         <button className="btn" onClick={checkAgain}>
           Check again

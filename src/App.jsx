@@ -100,6 +100,7 @@ function App() {
   function handleClear() {
     setMyDogs([]);
     setDogsData(dogs);
+    setIsNewGame(true);
 
     localStorage.removeItem("dogs");
   }
@@ -111,8 +112,6 @@ function App() {
 
   return (
     <div className="main-container">
-      {/* <Profile handleClear={handleClear} myDogs={myDogs} /> */}
-
       <Header
         showMyDogs={showMyDogs}
         startOver={startOver}
@@ -139,7 +138,11 @@ function App() {
       ) : (
         <>
           {" "}
-          {myDogs.length == 0 ? <p>No more dogs in your area</p> : ""}
+          {myDogs.length == 0 && !isNewGame ? (
+            <p>No more dogs in your area</p>
+          ) : (
+            ""
+          )}
           <Profile
             handleClear={handleClear}
             myDogs={myDogs}

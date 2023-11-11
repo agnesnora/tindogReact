@@ -244,7 +244,18 @@ textarea {
 .dog-liked:hover .dog-info {
   opacity: 1;
 }
+.dog-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 
+  opacity: 1;
+}
+.dog-text h3 {
+  color: #232946;
+}
 .dog-img {
   opacity: 1;
   display: block;
@@ -256,8 +267,7 @@ textarea {
 .dog-info {
   display: block;
   /* width: 50%; */
-  background-color: black;
-  color: red;
+
   font-size: 16px;
   border-radius: 8px;
 }
@@ -356,7 +366,7 @@ textarea {
 .send-todog-btn {
   padding: 0.4em;
   margin-top: 0.3em;
-  width: 100%;
+  width: 3rem;
   background: rgb(232, 45, 112);
   background: linear-gradient(
     90deg,
@@ -371,7 +381,7 @@ textarea {
   text-align: left;
 }
 .message-content > h4 {
-  margin: 0.2rem;
+  margin: 0.2rem 0;
 }
 .message-container-sent-wrapper {
   display: flex;
@@ -398,7 +408,7 @@ textarea {
 }
 
 .profile-footer {
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .btn {
