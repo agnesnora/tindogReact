@@ -14,7 +14,7 @@ export default function Header({ showMyDogs, startOver, checkMessages }) {
           </div>
         </div>
 
-        <img src="/images/paw.png" onClick={startOver} />
+        <img className="paw" src="/images/paw.png" onClick={startOver} />
 
         <HiChatBubbleOvalLeft className="icon chat" onClick={checkMessages} />
       </header>

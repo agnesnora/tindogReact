@@ -50,6 +50,14 @@ export default function Messages({ setMessages, messages }) {
   const sentMessageEl = messages.map((mes) => (
     <>
       <div className="message-container sent">
+        <div className="flex-button">
+          <button
+            className="delete-line"
+            onClick={() => deleteMessage(messages, mes.id)}
+          >
+            x
+          </button>
+        </div>
         <div className="message-container-sent-wrapper">
           <div
             className="message-avatar"
@@ -60,13 +68,6 @@ export default function Messages({ setMessages, messages }) {
             <p>{mes.text}</p>
           </div>
         </div>
-
-        <button
-          className="delete-line"
-          onClick={() => deleteMessage(messages, mes.id)}
-        >
-          x
-        </button>
       </div>
     </>
   ));

@@ -114,7 +114,7 @@ const inbox = [
   },
   {
     from: "Dodi",
-    text: "Hey Cili! Nice to see you here buddy. WHat's up?",
+    text: "Hey Cili! Nice to see you here buddy. What's up?",
     img: "/images/doodle.jpg",
     id: nanoid(),
   },

@@ -66,9 +66,24 @@ header > img {
 .person,
 .chat {
   font-size: 2rem;
-  color: #d9dee6;
+  color: #d4d8f0;
+  cursor: pointer;
+}
+.paw {
+  cursor: pointer;
 }
 
+.chat:hover,
+.chat:focus,
+.chat:active {
+  color: #67568c;
+}
+.btn:hover,
+.btn:focus,
+.btn:hover {
+  background-color: #67568c;
+  color: #fffffe;
+}
 .like-badge,
 .dismiss-badge {
   position: absolute;
@@ -215,8 +230,9 @@ footer button {
 .clear-btn {
   background-color: #fffffe;
   border-radius: 12px;
-  margin-bottom: 0.6em;
+  margin-bottom: 1em;
   padding: 0 2em;
+  font-weight: 500;
 }
 textarea {
   width: 100%;
@@ -329,6 +345,7 @@ textarea {
 }
 .mail-container h3 {
   text-align: left;
+  color: #232946;
 }
 
 .message-container {
@@ -341,12 +358,30 @@ textarea {
 }
 .sent {
   background-color: #d4d8f0;
+  display: block;
+  padding-top: 0;
+  /* display: flex;
+  justify-content: space-between; */
+}
+.flex-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 .delete-line {
   background-color: transparent;
-  padding: 1.2em;
+  margin-top: 0.2rem;
+  color: #fffffe;
+  font-weight: 800;
+}
+
+.delete-line:hover {
+  color: #232946;
+}
+.clear-btn:hover,
+.clear-btn:focus,
+.clear-btn:active {
+  background-color: #232946;
+  color: #d4d8f0;
 }
 .message-content {
   padding: 0.2em;
@@ -377,11 +412,13 @@ textarea {
   border-radius: 12px;
   font-size: 1.2rem;
 }
-.no-sent {
+.empty {
   text-align: left;
+  font-size: 0.9rem;
 }
 .message-content > h4 {
   margin: 0.2rem 0;
+  color: #232946;
 }
 .message-container-sent-wrapper {
   display: flex;
