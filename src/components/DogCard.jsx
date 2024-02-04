@@ -1,5 +1,5 @@
 import Badge from "./Badge";
-
+import "../styles/DogCardStyles/DogCard.css";
 export default function DogCard(props) {
   const { currentDog } = props;
 

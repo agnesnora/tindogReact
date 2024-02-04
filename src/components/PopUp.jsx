@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/PopUpStyles/PopUp.css";
 export default function PopUp({
   setPopUpOn,
   toDog,

@@ -1,3 +1,5 @@
+import "../styles/BadgeStyles/Badge.css";
+
 export default function Badge({ variant, children }) {
   let variantClass = variant && `${variant}-badge`;
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { inbox } from "../data";
+import "../styles/MessageStyles/Message.css";
+
 export default function Messages({ setMessages, messages }) {
   const [messagesLoaded, setMessagesLoaded] = useState(false);
   useEffect(() => {

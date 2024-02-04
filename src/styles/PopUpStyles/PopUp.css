@@ -1,0 +1,82 @@
+.message-avatar-small {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.dogList-container {
+  position: relative;
+}
+
+.popUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  /* background-color: #eff0f3; */
+  background-color: #d4d8f0;
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.popUp form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  border: none;
+}
+
+.message-toDog {
+  display: flex;
+  margin: 0.7em auto;
+  align-items: center;
+  justify-content: left;
+  color: #232946;
+  background-color: #fffffe;
+  border-radius: 12px;
+}
+
+.message-toDog h5 {
+  margin: 0;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.closePopUp-btn-container {
+  display: flex;
+  justify-content: end;
+}
+
+.closePopUp-btn {
+  display: flex;
+  background-color: transparent;
+  border: #232946 1.5px solid;
+  border-radius: 12px;
+  padding: 0.4em 1em;
+}
+
+.send-btn {
+  background-color: #232946;
+  color: #d4d8f0;
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+}
+
+@media (min-width: 760px) {
+  .popUp {
+    max-width: 500px;
+  }
+}/*# sourceMappingURL=PopUp.css.map */

@@ -1,0 +1,43 @@
+.like-badge,
+.dismiss-badge {
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 80px;
+  left: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 0.2rem 1.5rem;
+}
+
+.like-badge {
+  background: rgb(41, 215, 138);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 215, 138, 1) 78%,
+    rgba(110, 242, 242, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border: 10px solid rgb(41, 215, 138);
+}
+
+.dismiss-badge {
+  background: rgb(232, 45, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 45, 112, 1) 62%,
+    rgba(240, 105, 87, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border: 10px solid rgb(232, 45, 112);
+}

@@ -1,0 +1,73 @@
+.message-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #eff0f3;
+  border-radius: 18px;
+  margin-bottom: 1em;
+}
+.message-container .message-avatar {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-size: cover;
+}
+.message-container .message-container-sent-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.message-content {
+  padding: 0.2em;
+  margin-left: 0.5em;
+  text-align: left;
+}
+.message-content p {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.mail-container {
+  padding: 0.5rem;
+}
+.mail-container .messages-header {
+  display: flex;
+  justify-content: space-between;
+}
+.mail-container .messages-header h3 {
+  margin-top: 0;
+  text-align: left;
+  color: #232946;
+}
+.mail-container .messages-header h4 {
+  margin: 0.2rem 0;
+  color: #232946;
+}
+.mail-container .messages-header .clear-btn:hover,
+.mail-container .messages-header .clear-btn:focus,
+.mail-container .messages-header .clear-btn:active {
+  background-color: #232946;
+  color: #d4d8f0;
+}
+
+.sent {
+  background-color: #d4d8f0;
+  display: block;
+  padding-top: 0;
+  /* display: flex;
+    justify-content: space-between; */
+}
+
+.flex-button {
+  display: flex;
+  justify-content: right;
+}
+.flex-button .delete-line {
+  background-color: transparent;
+  margin-top: 0.2rem;
+  color: #fffffe;
+  font-weight: 800;
+}
+.flex-button .delete-line:hover {
+  color: #232946;
+}/*# sourceMappingURL=Message.css.map */

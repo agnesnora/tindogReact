@@ -13,7 +13,7 @@ body {
   max-width: 760px;
 }
 
-.dogCard-container {
+/* .dogCard-container {
   position: relative;
   height: 80vh;
   max-width: 100%;
@@ -41,7 +41,7 @@ body {
 }
 .content > p {
   margin-top: 0.2em;
-}
+} */
 
 header {
   display: flex;
@@ -84,7 +84,7 @@ header > img {
   background-color: #67568c;
   color: #fffffe;
 }
-.like-badge,
+/* .like-badge,
 .dismiss-badge {
   position: absolute;
   transform: rotate(-30deg);
@@ -126,7 +126,7 @@ header > img {
   -webkit-text-fill-color: transparent;
 
   border: 10px solid rgb(232, 45, 112);
-}
+} */
 
 footer {
   display: flex;
@@ -170,26 +170,26 @@ footer button {
   position: relative;
 }
 .popUp {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 70%; */
   /* background-color: #eff0f3; */
-  background-color: #d4d8f0;
+  /* background-color: #d4d8f0;
   border-radius: 18px;
-  padding: 2rem;
+  padding: 2rem; */
 }
 
 .popUp form {
-  width: 100%;
-  margin: 0 auto;
+  /* width: 100%;
+  margin: 0 auto; */
 }
 /* form > button {
   
 } */
 
-.message-toDog {
+/* .message-toDog {
   display: flex;
   margin: 0.7em auto;
   align-items: center;
@@ -225,8 +225,8 @@ footer button {
   display: block;
   margin: 1em auto;
   width: 100%;
-}
-
+} */
+/*ezmi hova megy clearbtn?*/
 .clear-btn {
   background-color: #fffffe;
   border-radius: 12px;
@@ -234,12 +234,12 @@ footer button {
   padding: 0 2em;
   font-weight: 500;
 }
-textarea {
+/* textarea {
   width: 100%;
   font-family: "Poppins", sans-serif;
   border-radius: 12px;
   border: none;
-}
+} */
 
 .dog-liked > img {
   max-height: 30vh;
@@ -327,7 +327,7 @@ textarea {
   background-size: cover;
   border-radius: 50%;
 }
-.message-avatar {
+/* .message-avatar {
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -338,9 +338,9 @@ textarea {
   width: 2em;
   border-radius: 50%;
   background-size: cover;
-}
+} */
 
-.mail-container {
+/* .mail-container {
   padding: 0.5rem;
 }
 .mail-container h3 {
@@ -362,8 +362,8 @@ textarea {
   padding-top: 0;
   /* display: flex;
   justify-content: space-between; */
-}
-.flex-button {
+/* } */
+/* .flex-button {
   display: flex;
   justify-content: right;
 }
@@ -372,9 +372,9 @@ textarea {
   margin-top: 0.2rem;
   color: #fffffe;
   font-weight: 800;
-}
+}  */
 
-.delete-line:hover {
+/* .delete-line:hover {
   color: #232946;
 }
 .clear-btn:hover,
@@ -394,7 +394,7 @@ textarea {
 }
 .messages-header h3 {
   margin-top: 0;
-}
+} */
 .dogs-liked-container {
   padding: 1em;
 }
