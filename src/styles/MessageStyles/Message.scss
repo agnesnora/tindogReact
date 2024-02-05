@@ -28,13 +28,6 @@
   }
 }
 
-//ez a popupba megy
-// .message-avatar-small {
-//   height: 2em;
-//   width: 2em;
-//   border-radius: 50%;
-//   background-size: cover;
-// }
 .mail-container {
   padding: 0.5rem;
   .messages-header {
@@ -50,7 +43,7 @@
       color: $darkPurple;
     }
     .clear-btn {
-      background-color: #fffffe;
+      background-color: $white;
       border-radius: 12px;
       margin-bottom: 1em;
       padding: 0 2em;
@@ -78,7 +71,7 @@
   .delete-line {
     background-color: transparent;
     margin-top: 0.2rem;
-    color: #fffffe;
+    color: $white;
     font-weight: 800;
   }
   .delete-line:hover {

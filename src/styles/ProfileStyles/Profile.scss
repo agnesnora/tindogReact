@@ -93,7 +93,7 @@
     rgba(232, 45, 112, 1) 62%,
     rgba(240, 105, 87, 1) 100%
   );
-  color: #fffffe;
+  color: $white;
   border-radius: 12px;
   font-size: 1.2rem;
 }
@@ -101,5 +101,5 @@
 .btn:focus,
 .btn:hover {
   background-color: $middlePurple;
-  color: #fffffe;
+  color: $white;
 }
