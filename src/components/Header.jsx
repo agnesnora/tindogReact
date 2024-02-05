@@ -1,5 +1,5 @@
 import { HiChatBubbleOvalLeft } from "react-icons/hi2";
-
+import "../styles/HeaderStyles/Header.css";
 export default function Header({ showMyDogs, startOver, checkMessages }) {
   return (
     <>

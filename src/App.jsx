@@ -1,4 +1,4 @@
-import "./App.css";
+import "../src/styles/AppStyles/App.css";
 import { useState, useEffect } from "react";
 import DogCard from "./components/DogCard";
 import Header from "./components/Header";

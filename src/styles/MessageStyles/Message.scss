@@ -1,8 +1,10 @@
+@import "../Variables/Variables.scss";
+
 .message-container {
   display: flex;
   align-items: center;
   padding: 1em;
-  background-color: #eff0f3;
+  background-color: $brightBackground;
   border-radius: 18px;
   margin-bottom: 1em;
   .message-avatar {
@@ -14,15 +16,6 @@
   .message-container-sent-wrapper {
     display: flex;
     align-items: center;
-    // .message-content {
-    //   padding: 0.2em;
-    //   margin-left: 0.5em;
-    //   text-align: left;
-    //   p {
-    //     margin-top: 0;
-    //     font-size: 0.8rem;
-    //   }
-    // }
   }
 }
 .message-content {
@@ -50,23 +43,30 @@
     h3 {
       margin-top: 0;
       text-align: left;
-      color: #232946;
+      color: $darkPurple;
     }
     h4 {
       margin: 0.2rem 0;
-      color: #232946;
+      color: $darkPurple;
+    }
+    .clear-btn {
+      background-color: #fffffe;
+      border-radius: 12px;
+      margin-bottom: 1em;
+      padding: 0 2em;
+      font-weight: 500;
     }
     .clear-btn:hover,
     .clear-btn:focus,
     .clear-btn:active {
-      background-color: #232946;
-      color: #d4d8f0;
+      background-color: $darkPurple;
+      color: $lightPurple;
     }
   }
 }
 
 .sent {
-  background-color: #d4d8f0;
+  background-color: $lightPurple;
   display: block;
   padding-top: 0;
   /* display: flex;
@@ -82,6 +82,22 @@
     font-weight: 800;
   }
   .delete-line:hover {
-    color: #232946;
+    color: $darkPurple;
   }
+}
+.empty {
+  text-align: left;
+  font-size: 0.9rem;
+}
+.message-content > h4 {
+  margin: 0.2rem 0;
+  color: $darkPurple;
+}
+.message-container-sent-wrapper {
+  display: flex;
+  align-items: center;
+}
+.message-content > p {
+  margin-top: 0;
+  font-size: 0.8rem;
 }

@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  text-align: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+  max-height: 100vh;
+  max-width: 760px;
+}
+
+.main-conainer {
+  margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+  body {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=App.css.map */

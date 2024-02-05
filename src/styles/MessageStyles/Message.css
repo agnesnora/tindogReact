@@ -43,6 +43,13 @@
   margin: 0.2rem 0;
   color: #232946;
 }
+.mail-container .messages-header .clear-btn {
+  background-color: #fffffe;
+  border-radius: 12px;
+  margin-bottom: 1em;
+  padding: 0 2em;
+  font-weight: 500;
+}
 .mail-container .messages-header .clear-btn:hover,
 .mail-container .messages-header .clear-btn:focus,
 .mail-container .messages-header .clear-btn:active {
@@ -70,4 +77,24 @@
 }
 .flex-button .delete-line:hover {
   color: #232946;
+}
+
+.empty {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.message-content > h4 {
+  margin: 0.2rem 0;
+  color: #232946;
+}
+
+.message-container-sent-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.message-content > p {
+  margin-top: 0;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=Message.css.map */

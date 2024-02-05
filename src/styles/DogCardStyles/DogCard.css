@@ -26,4 +26,10 @@
 }
 .dogCard-container .content p {
   margin-top: 0.2em;
+}
+
+@media (min-width: 760px) {
+  .dogCard-container {
+    height: 80vh;
+  }
 }/*# sourceMappingURL=DogCard.css.map */

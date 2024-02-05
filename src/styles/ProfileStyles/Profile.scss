@@ -1,5 +1,16 @@
+@import "../Variables/Variables.scss";
+
 .profile-footer {
   margin: 1em 0;
+}
+.dogList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2em;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  position: relative;
 }
 
 .btn {
@@ -10,8 +21,8 @@
   display: block;
   margin-bottom: 0.6rem;
   margin-left: 0;
-  background-color: #d4d8f0;
-  color: #232946;
+  background-color: $lightPurple;
+  color: $darkPurple;
 }
 .dog-liked > img {
   max-height: 30vh;
@@ -42,7 +53,7 @@
   opacity: 1;
 }
 .dog-text h3 {
-  color: #232946;
+  color: $darkPurple;
 }
 .dog-img {
   opacity: 1;
@@ -68,4 +79,27 @@
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dogs-liked-container {
+  padding: 1em;
+}
+.send-todog-btn {
+  padding: 0.4em;
+  margin-top: 0.3em;
+  width: 3rem;
+  background: rgb(232, 45, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 45, 112, 1) 62%,
+    rgba(240, 105, 87, 1) 100%
+  );
+  color: #fffffe;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+.btn:hover,
+.btn:focus,
+.btn:hover {
+  background-color: $middlePurple;
+  color: #fffffe;
 }

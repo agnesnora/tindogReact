@@ -2,6 +2,16 @@
   margin: 1em 0;
 }
 
+.dogList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2em;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+
 .btn {
   font-weight: 500;
   font-size: 1rem;
@@ -71,4 +81,26 @@
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dogs-liked-container {
+  padding: 1em;
+}
+
+.send-todog-btn {
+  padding: 0.4em;
+  margin-top: 0.3em;
+  width: 3rem;
+  background: rgb(232, 45, 112);
+  background: linear-gradient(90deg, rgb(232, 45, 112) 62%, rgb(240, 105, 87) 100%);
+  color: #fffffe;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:hover {
+  background-color: #67568c;
+  color: #fffffe;
 }/*# sourceMappingURL=Profile.css.map */
