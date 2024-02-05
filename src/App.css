@@ -128,27 +128,26 @@ header > img {
   border: 10px solid rgb(232, 45, 112);
 } */
 
-footer {
+/* footer {
   display: flex;
   justify-content: space-evenly;
   padding: 1em;
-}
+} */
 
-button {
+/* button {
   cursor: pointer;
   padding: 0.2em;
   background-color: #fff;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.profile button,
-footer button {
+} */
+/*footer button volt vesszővel*/
+.profile button {
   border-radius: 50%;
   font-size: 2rem;
 }
-.icon {
+/* .icon {
   vertical-align: middle;
 }
 
@@ -158,7 +157,7 @@ footer button {
 
 .dismiss {
   color: rgb(232, 45, 112);
-}
+} */
 
 .dogList-container {
   display: grid;
@@ -241,7 +240,7 @@ footer button {
   border: none;
 } */
 
-.dog-liked > img {
+/* .dog-liked > img {
   max-height: 30vh;
   border-radius: 18px;
 }
@@ -252,15 +251,15 @@ footer button {
   padding: 0.5em;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.dog-liked:hover .dog-img {
+} */
+/* .dog-liked:hover .dog-img {
   opacity: 0.3;
 }
 
 .dog-liked:hover .dog-info {
   opacity: 1;
-}
-.dog-text {
+} */
+/* .dog-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,18 +270,17 @@ footer button {
 }
 .dog-text h3 {
   color: #232946;
-}
-.dog-img {
+} */
+/* .dog-img {
   opacity: 1;
   display: block;
   width: 100%;
-  /* height: auto; */
+
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
 .dog-info {
   display: block;
-  /* width: 50%; */
 
   font-size: 16px;
   border-radius: 8px;
@@ -297,12 +295,12 @@ footer button {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+} */
 
 .main-conainer {
   margin: 0 auto;
 }
-.btn-refresh {
+/* .btn-refresh {
   font-weight: 500;
   font-size: 1rem;
 
@@ -315,7 +313,7 @@ footer button {
   );
   color: #fff;
   padding: 1em;
-}
+} */
 .profile {
   display: flex;
   align-items: center;
@@ -444,7 +442,7 @@ footer button {
   font-size: 0.7em;
 }
 
-.profile-footer {
+/* .profile-footer {
   margin: 1em 0;
 }
 
@@ -458,7 +456,7 @@ footer button {
   margin-left: 0;
   background-color: #d4d8f0;
   color: #232946;
-}
+} */
 
 @media (min-width: 760px) {
   body {

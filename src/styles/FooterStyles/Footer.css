@@ -1,0 +1,40 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.2em;
+  background-color: #fff;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+footer button {
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.heart {
+  color: rgb(0, 216, 148);
+}
+
+.dismiss {
+  color: rgb(232, 45, 112);
+}
+
+.btn-refresh {
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: rgb(232, 45, 112);
+  background: linear-gradient(90deg, rgb(232, 45, 112) 62%, rgb(240, 105, 87) 100%);
+  color: #fff;
+  padding: 1em;
+}/*# sourceMappingURL=Footer.css.map */

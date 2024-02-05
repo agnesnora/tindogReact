@@ -1,5 +1,6 @@
 import { FaHeart } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import "../styles/FooterStyles/Footer.css";
 
 export default function Footer({
   handleLike,

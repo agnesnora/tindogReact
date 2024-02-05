@@ -1,0 +1,74 @@
+.profile-footer {
+  margin: 1em 0;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.7em;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.6rem;
+  margin-left: 0;
+  background-color: #d4d8f0;
+  color: #232946;
+}
+
+.dog-liked > img {
+  max-height: 30vh;
+  border-radius: 18px;
+}
+
+.dog-liked {
+  position: relative;
+  padding: 0.5em;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dog-liked:hover .dog-img {
+  opacity: 0.3;
+}
+
+.dog-liked:hover .dog-info {
+  opacity: 1;
+}
+
+.dog-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.dog-text h3 {
+  color: #232946;
+}
+
+.dog-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.dog-info {
+  display: block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.dog-info {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}/*# sourceMappingURL=Profile.css.map */

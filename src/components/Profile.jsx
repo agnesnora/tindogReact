@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import PopUp from "./PopUp";
 import { nanoid } from "nanoid";
+import "../styles/ProfileStyles/Profile.css";
 
 export default function Profile({
   handleClear,
