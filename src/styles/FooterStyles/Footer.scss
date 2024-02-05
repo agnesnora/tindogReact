@@ -6,28 +6,27 @@ footer {
   padding: 1em;
 }
 button {
-  cursor: pointer;
   padding: 0.2em;
   background-color: #fff;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-footer button {
   border-radius: 50%;
-  font-size: 2rem;
-}
-.icon {
-  vertical-align: middle;
+  font-size: 2.2rem;
+  cursor: pointer;
+  .icon {
+    vertical-align: middle;
+  }
+
+  .heart {
+    color: rgb(0, 216, 148);
+  }
+
+  .dismiss {
+    color: rgb(232, 45, 112);
+  }
 }
 
-.heart {
-  color: rgb(0, 216, 148);
-}
-
-.dismiss {
-  color: rgb(232, 45, 112);
-}
 .btn-refresh {
   font-weight: 500;
   font-size: 1rem;

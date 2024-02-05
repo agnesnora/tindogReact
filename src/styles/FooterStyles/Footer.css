@@ -5,27 +5,21 @@ footer {
 }
 
 button {
-  cursor: pointer;
   padding: 0.2em;
   background-color: #fff;
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-footer button {
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  cursor: pointer;
 }
-
-.icon {
+button .icon {
   vertical-align: middle;
 }
-
-.heart {
+button .heart {
   color: rgb(0, 216, 148);
 }
-
-.dismiss {
+button .dismiss {
   color: rgb(232, 45, 112);
 }
 

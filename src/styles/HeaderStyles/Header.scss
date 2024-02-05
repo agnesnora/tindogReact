@@ -4,53 +4,48 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-left: 0;
-}
-
-.profile button {
-  border-radius: 50%;
-  font-size: 2rem;
-}
-.profile {
-  display: flex;
-  align-items: center;
-}
-.profile-picture {
-  background-image: url("../images/cili.jpg");
-  height: 1.2em;
-  width: 1.2em;
-  background-size: cover;
-  border-radius: 50%;
-}
-.profile-hero {
-  margin-left: 0.2em;
-  text-align: left;
-}
-.profile-hero > p,
-.profile-hero > h4 {
-  margin: 0;
-  font-size: 0.7em;
-}
-header > .icon {
-  margin-bottom: 0.5rem;
-}
-
-header > img {
-  width: 4rem;
-  margin-bottom: 0.5em;
-  margin-right: 3em;
-}
-
-.person,
-.chat {
-  font-size: 2rem;
-  color: $lightPurple;
-  cursor: pointer;
-}
-.paw {
-  cursor: pointer;
-}
-.chat:hover,
-.chat:focus,
-.chat:active {
-  color: $middlePurple;
+  .profile {
+    display: flex;
+    align-items: center;
+    button {
+      border-radius: 50%;
+      font-size: 2rem;
+      .profile-picture {
+        background-image: url("../images/cili.jpg");
+        height: 1.2em;
+        width: 1.2em;
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+    .profile-hero {
+      margin-left: 0.2em;
+      text-align: left;
+      p,
+      h4 {
+        margin: 0;
+        font-size: 0.7em;
+      }
+    }
+  }
+  .icon {
+    margin-bottom: 0.5rem;
+  }
+  .person,
+  .chat {
+    font-size: 2rem;
+    color: $lightPurple;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $middlePurple;
+    }
+  }
+  .paw {
+    cursor: pointer;
+    width: 4rem;
+    margin-bottom: 0.5em;
+    margin-right: 3em;
+  }
 }

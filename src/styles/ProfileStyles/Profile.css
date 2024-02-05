@@ -1,8 +1,7 @@
-.profile-footer {
-  margin: 1em 0;
+.dogs-liked-container {
+  padding: 1em;
 }
-
-.dogList-container {
+.dogs-liked-container .dogList-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 2em;
@@ -11,8 +10,21 @@
   justify-items: center;
   position: relative;
 }
+.dogs-liked-container .dogList-container .dog-liked {
+  position: relative;
+  padding: 0.5em;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dogs-liked-container .dogList-container .dog-liked img {
+  max-height: 30vh;
+  border-radius: 18px;
+}
 
-.btn {
+.profile-footer {
+  margin: 1em 0;
+}
+.profile-footer .btn {
   font-weight: 500;
   font-size: 1rem;
   padding: 0.7em;
@@ -23,17 +35,19 @@
   background-color: #d4d8f0;
   color: #232946;
 }
-
-.dog-liked > img {
-  max-height: 30vh;
-  border-radius: 18px;
+.profile-footer .btn:hover, .profile-footer .btn:focus {
+  background-color: #67568c;
+  color: #fffffe;
 }
 
-.dog-liked {
-  position: relative;
-  padding: 0.5em;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.dog-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  max-height: 30vh;
+  border-radius: 18px;
 }
 
 .dog-liked:hover .dog-img {
@@ -52,42 +66,10 @@
   -ms-transform: translate(-50%, -50%);
   opacity: 1;
 }
-
 .dog-text h3 {
   color: #232946;
 }
-
-.dog-img {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-
-.dog-info {
-  display: block;
-  font-size: 16px;
-  border-radius: 8px;
-}
-
-.dog-info {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.dogs-liked-container {
-  padding: 1em;
-}
-
-.send-todog-btn {
+.dog-text .send-todog-btn {
   padding: 0.4em;
   margin-top: 0.3em;
   width: 3rem;
@@ -96,11 +78,4 @@
   color: #fffffe;
   border-radius: 12px;
   font-size: 1.2rem;
-}
-
-.btn:hover,
-.btn:focus,
-.btn:hover {
-  background-color: #67568c;
-  color: #fffffe;
 }/*# sourceMappingURL=Profile.css.map */

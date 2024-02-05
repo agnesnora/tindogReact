@@ -8,7 +8,7 @@
 }
 .message-container .message-avatar {
   height: 3em;
-  width: 3em;
+  min-width: 3em;
   border-radius: 50%;
   background-size: cover;
 }
@@ -19,12 +19,16 @@
 
 .message-content {
   padding: 0.2em;
-  margin-left: 0.5em;
+  margin-left: 1em;
   text-align: left;
 }
 .message-content p {
   margin-top: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+.message-content h4 {
+  margin: 0.2rem 0;
+  color: #232946;
 }
 
 .mail-container {
@@ -44,15 +48,14 @@
   color: #232946;
 }
 .mail-container .messages-header .clear-btn {
-  background-color: #fffffe;
+  font-size: 1rem;
+  background-color: #eff0f3;
   border-radius: 12px;
   margin-bottom: 1em;
   padding: 0 2em;
   font-weight: 500;
 }
-.mail-container .messages-header .clear-btn:hover,
-.mail-container .messages-header .clear-btn:focus,
-.mail-container .messages-header .clear-btn:active {
+.mail-container .messages-header .clear-btn:hover, .mail-container .messages-header .clear-btn:focus, .mail-container .messages-header .clear-btn:active {
   background-color: #232946;
   color: #d4d8f0;
 }
@@ -70,6 +73,7 @@
   justify-content: right;
 }
 .flex-button .delete-line {
+  font-size: 0.9rem;
   background-color: transparent;
   margin-top: 0.2rem;
   color: #fffffe;
@@ -77,24 +81,4 @@
 }
 .flex-button .delete-line:hover {
   color: #232946;
-}
-
-.empty {
-  text-align: left;
-  font-size: 0.9rem;
-}
-
-.message-content > h4 {
-  margin: 0.2rem 0;
-  color: #232946;
-}
-
-.message-container-sent-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.message-content > p {
-  margin-top: 0;
-  font-size: 0.8rem;
 }/*# sourceMappingURL=Message.css.map */

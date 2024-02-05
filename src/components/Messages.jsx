@@ -12,7 +12,7 @@ export default function Messages({ setMessages, messages }) {
     const savedSentMessages = JSON.parse(localStorage.getItem("sentMessage"));
     if (savedSentMessages) {
       setMessages(savedSentMessages);
-      console.log("useEffectben", messages);
+
       setMessagesLoaded(true);
     }
   }, []);

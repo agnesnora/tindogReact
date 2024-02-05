@@ -106,7 +106,6 @@ function App() {
   }
 
   function checkMessages() {
-    console.log("messaages in check messages", messages);
     setMessageOn(true);
   }
 

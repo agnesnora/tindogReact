@@ -1,60 +1,47 @@
 @import "../Variables/Variables.scss";
+.dogs-liked-container {
+  padding: 1em;
+  .dogList-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2em;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    .dog-liked {
+      position: relative;
 
+      padding: 0.5em;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      img {
+        max-height: 30vh;
+        border-radius: 18px;
+      }
+    }
+  }
+}
 .profile-footer {
   margin: 1em 0;
-}
-.dogList-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 2em;
-  margin: 0 auto;
-  align-items: center;
-  justify-items: center;
-  position: relative;
-}
-
-.btn {
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 0.7em;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 0.6rem;
-  margin-left: 0;
-  background-color: $lightPurple;
-  color: $darkPurple;
-}
-.dog-liked > img {
-  max-height: 30vh;
-  border-radius: 18px;
+  .btn {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.7em;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 0.6rem;
+    margin-left: 0;
+    background-color: $lightPurple;
+    color: $darkPurple;
+    &:hover,
+    &:focus {
+      background-color: $middlePurple;
+      color: $white;
+    }
+  }
 }
 
-.dog-liked {
-  position: relative;
-
-  padding: 0.5em;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.dog-liked:hover .dog-img {
-  opacity: 0.3;
-}
-
-.dog-liked:hover .dog-info {
-  opacity: 1;
-}
-.dog-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-
-  opacity: 1;
-}
-.dog-text h3 {
-  color: $darkPurple;
-}
 .dog-img {
   opacity: 1;
   display: block;
@@ -62,44 +49,40 @@
 
   transition: 0.5s ease;
   backface-visibility: hidden;
+  max-height: 30vh;
+  border-radius: 18px;
 }
-.dog-info {
-  display: block;
 
-  font-size: 16px;
-  border-radius: 8px;
+.dog-liked:hover .dog-img {
+  opacity: 0.3;
 }
-.dog-info {
-  transition: 0.5s ease;
-  opacity: 0;
+
+.dog-liked:hover .dog-info {
+  opacity: 1;
+}
+
+.dog-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.dogs-liked-container {
-  padding: 1em;
-}
-.send-todog-btn {
-  padding: 0.4em;
-  margin-top: 0.3em;
-  width: 3rem;
-  background: rgb(232, 45, 112);
-  background: linear-gradient(
-    90deg,
-    rgba(232, 45, 112, 1) 62%,
-    rgba(240, 105, 87, 1) 100%
-  );
-  color: $white;
-  border-radius: 12px;
-  font-size: 1.2rem;
-}
-.btn:hover,
-.btn:focus,
-.btn:hover {
-  background-color: $middlePurple;
-  color: $white;
+  opacity: 1;
+  h3 {
+    color: $darkPurple;
+  }
+  .send-todog-btn {
+    padding: 0.4em;
+    margin-top: 0.3em;
+    width: 3rem;
+    background: rgb(232, 45, 112);
+    background: linear-gradient(
+      90deg,
+      rgba(232, 45, 112, 1) 62%,
+      rgba(240, 105, 87, 1) 100%
+    );
+    color: $white;
+    border-radius: 12px;
+    font-size: 1.2rem;
+  }
 }
